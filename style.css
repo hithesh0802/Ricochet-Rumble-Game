@@ -1,0 +1,203 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c2f311;
+    color: black;
+    font-style: normal;
+    font-weight: 900;
+    font-size: larger;
+    font-family:'Times New Roman', Times, serif;
+}
+#gameboard{
+    height:640px;
+    width:640px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid black;
+}
+
+.square{
+    height:80px;
+    width: 80px;
+    position: relative;
+}
+
+.square svg {
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    position: relative;
+    z-index: -5;
+}
+
+path{
+    position: relative;
+    z-index: -10;
+}
+
+.piece{
+    position: relative;
+    z-index: 5;
+}
+.beige{
+    background-color: rgb(25, 176, 50);
+}
+
+.brown{
+    background-color: yellowgreen;
+}
+
+.black{
+    fill: rgb(204, 12, 12);
+}
+
+.white{
+    fill: rgb(89, 15, 227);
+}
+
+.svg1{
+    z-index: -1;
+}
+
+.svg2{
+    z-index: 1;
+    position: absolute;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+} 
+
+@media (max-width: 700px) {
+    #gameboard {
+        width: 500px;
+        height: 500px;
+    }
+
+    .square {
+        width: 12.5%;
+        height: 12.5%;
+    }
+    .black{
+        fill: rgb(204, 12, 12);
+    }
+    
+    .white{
+        fill: rgb(89, 15, 227);
+    }
+
+    .square svg {
+        height: 90%;
+        width: 90%;
+        margin: 10%;
+        position: relative;
+        z-index: -5;
+    }
+
+    .piece {
+        width: 70%;
+        height: 70%;
+        margin: 10%;
+    }
+
+    .move-history {
+        margin-top: 20px;
+    }
+    
+    .timer, #player, #info-display {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+
+/* .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameboard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.square {
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    z-index: -5;
+}
+
+.square svg {
+    height: 70%;
+    width: 70%;
+    margin: 1.5%;
+    position: relative;
+    z-index: -5;
+}
+
+.beige {
+    background-color: beige;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.piece { */
+    /* width: 80%;
+    height: 80%; */
+    /* position: relative;
+    z-index:5;
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.timer, #player, #info-display {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+} */ 
+
+
+
