@@ -122,6 +122,12 @@ button {
         font-size: large;
         color: #f1f6f5;
     }
+    .line {
+        width: 2px; 
+        height: 45px; 
+        background-color: lightgray;
+        margin-left: 8px; 
+    }
     .square {
         width: 12.5%;
         height: 12.5%;
