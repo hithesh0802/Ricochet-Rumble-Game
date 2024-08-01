@@ -25,42 +25,50 @@
     </style>
 </head>
 <body>
-    <div id="game-mode-selection" style="display: inline;">
-    <button onclick="startGame('player')" style="margin: 5%; background-color: black; font-size: x-large; width:50%; border: 2px solid #e6630c;">Play Against Player</button>
-    <button onclick="startGame('bot')" style="margin: 5%; background-color: black; font-size: x-large; width:50%; border: 2px solid #e6630c;">Play Against Bot</button>
-</div>
-<div id="game-container" style="display: none; position: relative;">
-    <button id="skipSpellforBlue" style="border: 2px solid #e6630c;">Skip Yellow's turn</button>
-    <button id="ShieldSpellforBlue" style="border: 2px solid #e6630c;">Shield your Titan now!</button>
-    <div id="gameboard" style="width: 100%; height: 400px; background-color: #ddd;"></div>
-    <button id="skipSpellforYellow" style="border: 2px solid #e6630c;">Skip Blue's turn</button>
-    <button id="ShieldSpellforYellow" style="border: 2px solid #e6630c;">Shield your Titan now!</button>
-    <div class="game-info">
-        <div id="final">
-            <p id="player-display">It is <span id="player" style="font-size: large;"></span>'s go.</p>
-            <p id="info-display"></p>
-        </div>
-        <div id="black-timer">Blue: 100s</div>
-        <div id="white-timer">Yellow: 100s</div>
-        <div class="controls">
-            <button onclick="pauseGame()"><img src="pause-white-color-icon-vector.jpg" style="height: 15px; width: 15px;"></button>
-            <button onclick="resumeGame()"><img src="ogibymtk.png" style="height: 15px; width: 15px;"></button>
-            <button onclick="resetGame()">Reset Game</button>
-            <button onclick="undo()"><img src="7qozmazd.png" style="height: 15px; width: 15px;"></button>
-            <button onclick="redo()"><img src="4gq4jnum.png" style="height: 15px; width: 15px;"></button>
-            <button onclick="replay()">Replay</button>
-        </div>
-        <p style="color: whitesmoke; font-size: large;">MOVE HISTORY:</p>
-        <div id="moves-container" style="width:100%; max-width: 600px; margin: 10px auto 0; box-sizing: border-box;">
-            <div id="black-moves" style="background-color: #333; color: white; padding: 10px; margin-bottom: 5px; border: 1px solid #e6630c; text-align: center; word-wrap: break-word;">
-                Black Moves:
-            </div>
-            <div id="white-moves" style="background-color: #333; color: white; padding: 10px; border: 1px solid #e6630c; text-align: center; word-wrap: break-word;">
-                White Moves:
-            </div>
-        </div>
+     <div id="game-mode-selection" style="display: inline;">
+        <button onclick="startGame('player')" style="margin: 5%; background-color: black; font-size: x-large; width:50%; border: 2px solid #e6630c;">Play Against Player</button>
+        <button onclick="startGame('bot')" style="margin: 5%; background-color: black; font-size: x-large; width:50%; border: 2px solid #e6630c;">Play Against Bot</button>
     </div>
-</div>
+    <div id="game-container" style="display: none;" >
+        <button id="skipSpellforBlue" style="border: 2px solid #e6630c;">Skip Yellows turn</button>
+        <button id="ShieldSpellforBlue" style="border: 2px solid #e6630c;">Shield your Titan now!</button>
+        <div id="gameboard"></div>
+        <button id="skipSpellforYellow" style="border: 2px solid #e6630c;">Skip Blues turn</button> 
+        <button id="ShieldSpellforYellow" style="border: 2px solid #e6630c;">Shield your Titan now!</button>
+        <div class="game-info">
+            <div id="final">
+                <p id="player-display">It is <span id="player" style="font-size: large;"></span>'s go.</p>
+                <p id="info-display"></p>
+            </div>
+            <div id="black-timer">Blue: 100s</div>
+            <div id="white-timer">Yellow: 100s</div>
+            <div class="controls"></div>
+                <button onclick="pauseGame()"><img src="pause-white-color-icon-vector.jpg" style="height: 15px; width: 15px;"></button>
+                <button onclick="resumeGame()"><img src="ogibymtk.png" style="height: 15px; width: 15px;"></button>
+                <button onclick="resetGame()">Reset Game</button>
+                <!-- <div id="features"> -->
+                <button onclick="undo()"><img src="7qozmazd.png" style="height: 15px; width: 15px;"></button>
+                <button onclick="redo()"><img src="4gq4jnum.png" style="height: 15px; width: 15px;"></button>
+                <button onclick="replay()">Replay</button>      
+            </div>
+            <script src="pieces.js"></script>
+            <script src="app.js"></script>
+            <audio id="myAudio" src="gamewon.wav"></audio>
+            <audio id="specialEffects" src="mixkit-extra-bonus-in-a-video-game-2045.wav"></audio>
+            <audio id="audioFull" src="game-music-loop-3-144252_IZKn0Q70.mp3"></audio>
+            <audio id="destroySR" src="mixkit-cinematic-laser-gun-thunder-1287_T10MhQRG.wav" ></audio>
+            <audio id="shoot" src="bulletlaunch_bVbPBa23.wav"></audio>
+            <audio id="wrong" src="mixkit-electric-buzz-glitch-2594.wav"></audio> 
+            <p style="color: whitesmoke; font-size: large;">MOVE HISTORY:</p>
+            <div id="moves-container" style="width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden;">
+                <div id="black-moves" style="background-color: #333; color: white; padding: 10px; margin: 5px 0; border: 1px solid #e6630c; text-align: center;">
+                    Black Moves:
+                </div>
+                <div id="white-moves" style="background-color: #333; color: white; padding: 10px; margin: 5px 0; border: 1px solid #e6630c; text-align: center;">
+                    White Moves:
+                </div>
+            </div>
+        </div>
 
 </body>
 </html>
